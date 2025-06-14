@@ -32,7 +32,7 @@ self.addEventListener('fetch', event => {
       return fetch(event.request).then(response => {
 
         // fetch request returned 404, serve custom 404 page
-        if (response.status === 403) {
+        if (response.status === 404) {
           return caches.match('../PageNotFound.html');
         }
       });
