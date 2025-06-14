@@ -12,6 +12,21 @@
   </head>
   
 <script>
+const filesToCache = [
+  './',
+  './PageNotFound.html',
+  //'../img/teapot_2x.png',
+  './java/Teapot.js'
+  //'../css/teapot.css',
+  //'../java/script.js',
+  //'../fonts/IBMPlexMono-Bold.ttf',
+  //'../fonts/IBMPlexMono-Regular.ttf',
+  //'../fonts/PlayfairDisplay-Regular.ttf',
+  //'../java/ErrorRedirect.js'
+];
+</script>
+  
+<!--<script>
   if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("./java/ErrorRedirect.js", { scope: "./" }).then(
     (registration) => {
@@ -24,7 +39,7 @@
 } else {
   console.error("Service workers are not supported.");
 }
-</script>
+</script>-->
 
 <body>
     <div id="mobilebutton" style="z-index:2;">
