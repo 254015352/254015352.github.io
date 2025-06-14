@@ -11,31 +11,6 @@
     <link href="./img/AC.png" rel="icon">
   </head>
   
-<script>
-const filesToCache = [
-  './',
-  './PageNotFound.html',
-  //'../img/teapot_2x.png',
-  './java/Teapot.js',
-  //'../css/teapot.css',
-  //'../java/script.js',
-  //'../fonts/IBMPlexMono-Bold.ttf',
-  //'../fonts/IBMPlexMono-Regular.ttf',
-  //'../fonts/PlayfairDisplay-Regular.ttf',
-  './java/ErrorRedirect.js'
-];
-  const staticCacheName = 'pages-cache-v1';
-
-self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(staticCacheName).then(cache => {
-      return cache.addAll(filesToCache);
-    })//;
-  );
-});
-
-</script>
-  
 <!--<script>
   if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("./java/ErrorRedirect.js", { scope: "./" }).then(
