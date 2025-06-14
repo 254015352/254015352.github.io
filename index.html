@@ -24,6 +24,16 @@ const filesToCache = [
   //'../fonts/PlayfairDisplay-Regular.ttf',
   //'../java/ErrorRedirect.js'
 ];
+  const staticCacheName = 'pages-cache-v1';
+
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(staticCacheName).then(cache => {
+      return cache.addAll(filesToCache);
+    })//;
+  );
+});
+
 </script>
   
 <!--<script>
